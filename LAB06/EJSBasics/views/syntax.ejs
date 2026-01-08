@@ -1,0 +1,19 @@
+<%- include("partials/header", { title, activePage }) %>
+
+<div class="syntax-card">
+  <h1 class="syntax-title"><%= title %></h1>
+
+  <ul class="syntax-list">
+    <% topics.forEach(t => { %>
+      <li><%= t %></li>
+    <% }) %>
+  </ul>
+
+  <% if (topics.length >= 4) { %>
+    <p class="syntax-success">You have enough topics for today.</p>
+  <% } else { %>
+    <p class="syntax-warning">Add more topics.</p>
+  <% } %>
+</div>
+
+<%- include("partials/footer") %>

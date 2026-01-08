@@ -1,0 +1,14 @@
+<%- include("partials/header", { title, activePage }) %>
+
+<h1 class="students-title"><%= title %></h1>
+
+<ul class="students-list">
+  <% students.forEach(s => { %>
+    <li>
+      <a href="/students/<%= s.id %>"><%= s.name %></a>
+      <span class="students-major"><%= s.major %></span>
+    </li>
+  <% }) %>
+</ul>
+
+<%- include("partials/footer") %>
